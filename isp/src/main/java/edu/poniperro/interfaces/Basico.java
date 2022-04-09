@@ -1,6 +1,6 @@
 package edu.poniperro.interfaces;
 
-public interface Generable {
+public interface Basico {
 
     void nueva(String palabra);
 

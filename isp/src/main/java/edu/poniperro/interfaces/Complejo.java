@@ -2,7 +2,7 @@ package edu.poniperro.interfaces;
 
 import edu.poniperro.Idioma;
 
-public interface Corregible {
+public interface Complejo {
 
     boolean correcto(Idioma idioma);
 }

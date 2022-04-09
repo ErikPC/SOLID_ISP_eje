@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import edu.poniperro.interfaces.Corregible;
-import edu.poniperro.interfaces.Generable;
+import edu.poniperro.interfaces.Complejo;
+import edu.poniperro.interfaces.Basico;
 
-public class ProcesadorTexto implements Corregible, Generable {
+public class ProcesadorTexto implements Complejo, Basico {
 
 	private List<String> texto = new ArrayList<>();
 
