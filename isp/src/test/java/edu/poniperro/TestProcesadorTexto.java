@@ -4,12 +4,15 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import edu.poniperro.interfaces.Corregible;
+import edu.poniperro.interfaces.Generable;
+
 public class TestProcesadorTexto {
 
 	@Test
 	public void test_simple() {
 
-		ProcesadorTexto procesador = new ProcesadorTexto();
+		Generable procesador = new ProcesadorTexto();
 
 		procesador.nueva("No");
 		procesador.nueva("himporta");
@@ -22,12 +25,14 @@ public class TestProcesadorTexto {
 	@Test
 	public void test_con_idioma() {
 
-		ProcesadorTexto procesador = new ProcesadorTexto();
+		Generable generable = new ProcesadorTexto();
 
-		procesador.nueva("Tengo");
-		procesador.nueva("hambre");
+		generable.nueva("Tengo");
+		generable.nueva("hambre");
 
-		assertEquals("Tengo hambre", procesador.texto());
+		assertEquals("Tengo hambre", generable.texto());
+
+		Corregible procesador = new ProcesadorTexto();
 
 		assertTrue(procesador.correcto(Idioma.ES));
 	}
